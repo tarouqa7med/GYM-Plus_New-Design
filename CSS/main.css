@@ -39,7 +39,7 @@ nav.navbar {
 header {
     position: relative;
     height: 100vh;
-    background-image: url("./images/b1-09d842f2.jpg");
+    background-image: url("./../attachments/b1-09d842f2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -440,28 +440,28 @@ section#Gallery {
 
 }
 #Gallery .container .images .image:nth-child(1) {
-    background-image: url("./images/g1-9345a8f7.jpg");
+    background-image: url("./../attachments/g1-9345a8f7.jpg");
     grid-row: span 2;
 
 }
 #Gallery .container .images .image:nth-child(2) {
-    background-image: url("./images/g5-8ce27a04.jpg");
+    background-image: url("./../attachments/g5-8ce27a04.jpg");
 }
 #Gallery .container .images .image:nth-child(3) {
-    background-image: url("./images/g4-9fc39936.jpg");
+    background-image: url("./../attachments/g4-9fc39936.jpg");
 }
 #Gallery .container .images .image:nth-child(4) {
-    background-image: url("./images/g6-64027e43.jpg");
+    background-image: url("./../attachments/g6-64027e43.jpg");
     grid-row: span 2;
 }
 #Gallery .container .images .image:nth-child(5) {
-    background-image: url("./images/g3-1f7cace9.jpg");
+    background-image: url("./../attachments/g3-1f7cace9.jpg");
 }
 #Gallery .container .images .image:nth-child(6) {
-    background-image: url("./images/g2-9aae0bfa.jpg");
+    background-image: url("./../attachments/g2-9aae0bfa.jpg");
 }
 #Gallery .container .images .image:nth-child(7) {
-    background-image: url("./images/g7-9ead7675.jpg");
+    background-image: url("./../attachments/g7-9ead7675.jpg");
 }
 
 .contact .container {

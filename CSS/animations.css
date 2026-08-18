@@ -1,0 +1,19 @@
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes change-color {
+    0% {
+        color: white;
+    } 80% {
+        color: red;
+    } 100% {
+        color: black;
+    }
+}

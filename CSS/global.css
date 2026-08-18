@@ -1,0 +1,49 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --main: #E55556;
+    --fontOswald: Oswald, sans-serif;
+    --fontPTSans: PT Sans, sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+.container {
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.clearfix {
+    clear: both;
+}
+ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+.container .spans {
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.container .spans span:nth-child(odd) {
+    border-bottom: 0.5px solid var(--main-text);
+    width: 85px;
+}
+.container .spans span:nth-child(even) {
+    border-bottom: 0.5px solid var(--main-text);
+    width: 200px;
+}

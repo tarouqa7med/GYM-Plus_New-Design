@@ -36,27 +36,30 @@ header nav .container {
     justify-content: space-between;
     align-items: center;
 }
+header nav .container input {
+    opacity: 0;
+}
 header nav .container .responsive {
     padding: 8px 0;
     background-color: transparent;
-    border: 1px solid white;
+    border: 2px solid var(--red-blue);
     border-radius: 5px;
     position: absolute;
     top: 50%;
     right: 5%;
     transform: translateY(-50%);
     width: 55px;
-    height: 45px;
+    height: 40px;
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
 }
 header nav .container .responsive span {
     width: 65%;
-    height: 5px;
-    background-color: white;
+    height: 6px;
+    background-color: var(--red-blue);
 }
 header nav .container .ul ul {
     display: flex;
@@ -124,7 +127,7 @@ header .hook {
 header .hook h2 {
     color: #C9C9C9;
     font-size: 60px;
-    font-family: 'Sora Bold';
+    font-family: 'Sora';
     margin-bottom: 20px;
     letter-spacing: 8px;
     text-shadow: -4px 3px 2px  #3f3f3f;
@@ -132,14 +135,14 @@ header .hook h2 {
 header .hook h3 {
     color: #C9C9C9;
     font-size: 30px;
-    font-family: 'Sora Bold';
+    font-family: 'Sora';
     letter-spacing: 5px;
     margin-bottom: 20px;
     text-shadow: -4px 3px 2px  #3f3f3f;
 }
 header .hook button {
     background-color: transparent;
-    padding: 15px 20px;
+    padding: 14px 25px;
     color: white;
     font-size:  18px;
     font-weight: bolder;
@@ -153,6 +156,7 @@ header .hook button:hover {
     background-color: transparent;
 }
 header .hook button span {
+    margin: 0;
     position: relative;
     color: var(--red-blue);
 }
@@ -170,13 +174,13 @@ section.services {
 }
 .services .container {
     width: 85%;
-    max-width: 1400px;
+    max-width: 1350px;
     display: block;
 }
 .services .container .heading {
     display: block;
     text-transform: uppercase;
-    font-family: 'Sora Bold';
+    font-family: 'Sora';
 }
 .services .container .heading h5 {
     color: var(--red-blue);
@@ -203,7 +207,7 @@ section.services {
     color: var(--red-blue);
 }
 
-.services .container > p {
+.services .container p.title {
     margin-block: 30px;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
@@ -252,13 +256,15 @@ section.services {
 .services .container .layout .div p:first-of-type {
     margin-bottom: 10px;
     text-align: center;
-    font-family: 'Sora Bold', sans-serif;
+    font-family: 'Sora', sans-serif;
     font-size: 20px;
+    font-weight: bolder;
 }
 .services .container .layout .div p:last-of-type {
     font-family: 'Roboti', sans-serif;
     font-size: 16px;
     text-align: center;
+    line-height: 20px;
 }
 .services .container .layout .div hr.line {
     margin-top: 10px;
@@ -272,161 +278,411 @@ section.services {
     background-color: var(--red-blue);
 }
 
-section#Clients {
+section.Classes {
     padding-block: 50px;
 }
-.clients .container {
-    max-width: 1400px;
+.Classes .container {
+    width: 85%;
+    max-width: 1350px;
+    display: block;
 }
-.clients .container h1 {
-    text-align: center;
-    font-size: 45px;
-    font-family: var(--fontOswald);
-    margin-bottom: 50px;
+.Classes .container .heading {
+    display: block;
+    text-transform: uppercase;
+    font-family: 'Sora';
 }
-.clients .container .layout {
+.Classes .container .heading h5 {
+    color: var(--red-blue);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.Classes .container .heading h3 {
+    position: relative;
+    font-size: 55px;
+    margin-bottom: 5px;
+}
+.Classes .container .heading h3::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 110px;
+    height: 5px;
+    background-color: var(--red-blue);
+    border-radius: 10px;
+    animation: h3-before 2s linear 0s infinite alternate forwards;
+}
+.Classes .container .heading h3 span {
+    color: var(--red-blue);
+}
+.Classes .container p.title {
+    margin-block: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+}
+.Classes .container .layout {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.clients .container .layout .part1,
-.clients .container .layout .part2 {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
-.clients .container .layout > div p {
-    text-align: center;
-    width: 80%;
-    font-size: 15px;
-    font-family: sans-serif;
-    line-height: 25px;
-    margin-bottom: 25px;
+.Classes .container .layout .col {
+    width: calc(100% / 3);
+    height: 320px;
 }
-.clients .container .layout > div h3 {
-    margin-bottom: 25px;
-    color: var(--main);
-    font-family: var(--fontOswald);
-    letter-spacing: 1px;
-    font-size: 25px;
+.Classes .container .layout .col .item {
+    display: block;
+    margin: auto;
+    width: fit-content;
+    background-color: blue;
+    width: 90%;
+    height: 260px;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.75);
 }
-.clients .container .layout > div .image {
-    display: flex;
-    border: 2px solid var(--main);
-    border-radius: 50%;
+.Classes .container .layout .col .item .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
     overflow: hidden;
 }
-.clients .container .layout > div .image img {
+.Classes .container .layout .col .item .image img {
     width: 100%;
+    height: 100%;
+    filter: brightness(80%);
+}
+.Classes .container .layout .col .item .details {
+    padding: 10px;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 125px;
+    background-color: #271f23;
+    color: white;
+    border: 3px solid var(--red-blue);
+    border-radius: 20px;
+    text-align: center;
+}
+.Classes .container .layout .col .item .details h3 {
+    margin-bottom: 10px;
+    font-family: 'Roboto', cursive;
+    font-size: 20px;
+    font-weight: 500;
+}
+.Classes .container .layout .col .item .details p {
+    font-family: 'Sora', cursive;
+    font-size: 10px;
+    letter-spacing: 0.75px;
+    color: #E0DDDD;
+    margin-bottom: 10px;
+}
+.Classes .container .layout .col .item .details button {
+    padding: 8px 15px;
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    border: 2px solid var(--red-blue);
+    border-radius: 10px;
+    width: fit-content;
+}
+.Classes .container .layout .col .item .details button span {
+    font-family: 'Arial';
 }
 
 section.trainers {
     padding-block: 50px;
 }
 .trainers .container {
+    width: 85%;
+    max-width: 1350px;
     display: block;
-    width: 100%;
 }
-.trainers .container h1 {
-    color: white;
-    font-family: var(--fontOswald);
-    text-align: center;
-    letter-spacing: 2px;
-    font-size: 40px;
-    margin-bottom: 50px;
+.trainers .container .heading {
+    display: block;
+    text-transform: uppercase;
+    font-family: 'Sora';
+}
+.trainers .container .heading h5 {
+    color: var(--red-blue);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.trainers .container .heading h3 {
+    position: relative;
+    font-size: 55px;
+    margin-bottom: 5px;
+}
+.trainers .container .heading h3::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 110px;
+    height: 5px;
+    background-color: var(--red-blue);
+    border-radius: 10px;
+    animation: h3-before 2s linear 0s infinite alternate forwards;
+}
+.trainers .container .heading h3 span {
+    color: var(--red-blue);
+}
+.trainers .container p.title {
+    margin-block: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
 }
 .trainers .container .layout {
-    padding-inline: 35px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-}
-.trainers .container .layout .coach {
-    padding-block: 35px;
-    width: 250px;
-    background-color: white;
-    box-shadow: 0 1px 3px 2px black;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    gap: 20px;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
-.trainers .container .layout .coach img {
-    width: 150px;
-    height: 160px;
+.trainers .container .layout .col {
+    width: calc(25% - 15px);
+    background-color: red;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 5px 4px 25px #00000025;
+}
+.trainers .container .layout .col .item {
     display: block;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    border: 5px solid var(--main);
-    border-radius: 50%;
-}
-.trainers .container .layout .coach h3 {
-    font-size: 22px;
-    font-family: var(--fontOswald);
-    letter-spacing: 2px;
-    color: var(--main);
-}
-.trainers .container .layout .coach h4 {
-    font-size: 16px;
-    font-family: var(--fontOswald);
-    letter-spacing: 2px;
-}
-.trainers .container .layout .coach p {
-    padding-inline: 12px;
-    font-size: 14px;
-    font-family: sans-serif;
-    letter-spacing: 1px;
-    line-height: 25px;
-    text-align: center;
-}
-.trainers .container .layout .coach ul {
+    margin: auto;
+    padding-block: 35px;
     width: 100%;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
-.trainers .container .layout .coach ul li a {
-    width: 35px;
-    height: 35px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: var(--main);
-    color: white;
-    border: 1px solid black;
+.trainers .container .layout .col .item .image {
+    width: 175px;
+    height: 175px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    border: 2px solid var(--red-blue);
     border-radius: 50%;
-    text-decoration: none;
+    overflow: hidden;
     transition-duration: 500ms;
+}
+.trainers .container .layout .col:hover .item .image {
+    box-shadow: 0 0 4px 4px color-mix(in srgb, var(--red-blue) 30%, transparent 70%);
+}
+.trainers .container .layout .col .item .image img {
+    width: 100%;
+}
+.trainers .container .layout .col .item .trainer_name-job {
+    font-family: 'Sora', cursive;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.trainers .container .layout .col .item .trainer_name-job h3.name {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.trainers .container .layout .col .item .trainer_name-job p.job {
+    font-size: 15px;
+    font-weight: bolder;
+    color: var(--red-blue);
+}
+.trainers .container .layout .col .item .ul-1 {
+    display: flex;
+    margin: auto;
+    width: fit-content;
+    margin-bottom: 30px;
+}
+.trainers .container .layout .col .item .ul-1 ul {
+    gap: 0px;
+    margin-right: 4px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.trainers .container .layout .col .item .ul-1 ul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--red-blue);
+    transition-duration: 250ms;
+}
+.trainers .container .layout .col:hover .item .ul-1 ul::before {
+    left: 100%;
+}
+.trainers .container .layout .col .item .ul-1 ul li i {
+    font-size: 14px;
+    color: var(--red-blue);
+}
+.trainers .container .layout .col .item .ul-1 ul li.i-solid i {
+    position: absolute;
+    top: 2px;
+    opacity: 0;
+    transition-duration: 250ms;
+}
+.trainers .container .layout .col .item .ul-1 ul li.i-solid:nth-child(1) i {
+    left: 0;
+}
+.trainers .container .layout .col .item .ul-1 ul li.i-solid:nth-child(2) i {
+    left: 20%;
+}
+.trainers .container .layout .col .item .ul-1 ul li.i-solid:nth-child(3) i {
+    left: 40%;
+}
+.trainers .container .layout .col .item .ul-1 ul li.i-solid:nth-child(4) i {
+    left: 60%;
+}
+.trainers .container .layout .col .item .ul-1 ul li.i-solid:nth-child(5) i {
+    left: 80%;
+}
+.trainers .container .layout .col:hover .item .ul-1 ul li.i-solid:nth-child(1) i {
+    transition-delay: 125ms;
+}
+.trainers .container .layout .col:hover .item .ul-1 ul li.i-solid:nth-child(2) i {
+    transition-delay: 250ms;
+}
+.trainers .container .layout .col:hover .item .ul-1 ul li.i-solid:nth-child(3) i {
+    transition-delay: 375ms;
+}
+.trainers .container .layout .col:hover .item .ul-1 ul li.i-solid:nth-child(4) i {
+    transition-delay: 500ms;
+}
+.trainers .container .layout .col:hover .item .ul-1 ul li.i-solid:nth-child(5) i {
+    transition-delay: 625ms;
+}
+.trainers .container .layout .col:hover .item .ul-1 ul li.i-solid i {
+    opacity: 1;
+}
+.trainers .container .layout .col .item .ul-1 p {
+    font-weight: 600;
+    font-family: 'Roboto', cursive;
+    font-size: 16px;
+}
+.trainers .container .layout .col .item .ul-1 p:first-of-type {
+    margin-right: 4px;
+}
+.trainers .container .layout .col .item .ul-1 p:last-of-type {
+    color: var(--red-blue);
+}
+.trainers .container .layout .col .item .ul-2 {
+    margin-bottom: 25px;
+}
+.trainers .container .layout .col .item .ul-2 ul {
+    gap: 10px;
+}
+.trainers .container .layout .col .item .ul-2 ul li {
+    padding: 8px;
+    box-shadow: 0 0 5px 3px #00000025;
+    border-radius: 20px;
+    font-family: 'Sora', cursive;
+    font-size: 12px;
+}
+.trainers .container .layout .col .item .ul-3 {
+    width: 150px;
+    margin-bottom: 20px;
+}
+.trainers .container .layout .col .item .ul-3 ul {
+    display: flex;
+    justify-content: space-between;
+}
+.trainers .container .layout .col .item .ul-3 ul li a i {
+    font-size: 20px;
+    color: var(--red-blue);
+}
+.trainers .container .layout .col .item button {
+    padding: 10px 20px;
+    position: relative;
+    border: 2px solid var(--red-blue);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
     cursor: pointer;
 }
-.trainers .container .layout .coach ul li a:hover {
-    background-color: white;
-    color: var(--main);
+.trainers .container .layout .col .item button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--red-blue);
+    transition-duration: 250ms;
+}
+.trainers .container .layout .col .item button:hover::before {
+    left: 0;
+}
+.trainers .container .layout .col .item button span {
+    position: relative;
+    font-size: 18px;
+    font-family: 'Arial', cursive;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--red-blue);
+    transition-duration: 250ms;
+}
+.trainers .container .layout .col .item button:hover span {
+    color: white;
 }
 
 section#Gallery {
     padding-block: 50px;
 }
 #Gallery .container {
-    width: 90%;
+    width: 85%;
+    max-width: 1350px;
+    display: block;
 }
-#Gallery .container h1 {
-    margin-bottom: 35px;
-    text-align: center;
-    font-family: var(--fontOswald);
-    font-size: 45px;
-    letter-spacing: 2px;
+#Gallery .container .heading {
+    display: block;
+    text-transform: uppercase;
+    font-family: 'Sora';
+}
+#Gallery .container .heading h5 {
+    color: var(--red-blue);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+#Gallery .container .heading h3 {
+    position: relative;
+    font-size: 55px;
+    margin-bottom: 5px;
+}
+#Gallery .container .heading h3::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 110px;
+    height: 5px;
+    background-color: var(--red-blue);
+    border-radius: 10px;
+    animation: h3-before 2s linear 0s infinite alternate forwards;
+}
+#Gallery .container .heading h3 span {
+    color: var(--red-blue);
+}
+#Gallery .container p.title {
+    margin-block: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
 }
 #Gallery .container .images {
     display: grid;
-    grid-template-columns: repeat(3, 350px);
-    grid-template-rows: repeat(3, 350px);
+    grid-template-columns: repeat(3, 450px);
+    grid-template-rows: repeat(3, 300px);
     width: fit-content;
     margin: auto;
     border-radius: 10px;
@@ -441,238 +697,43 @@ section#Gallery {
 
 }
 #Gallery .container .images .image:nth-child(1) {
-    background-image: url("./../attachments/g1-9345a8f7.jpg");
+    background-image: url("./../attachments/gallery/images_1.png");
     grid-row: span 2;
 
 }
 #Gallery .container .images .image:nth-child(2) {
-    background-image: url("./../attachments/g5-8ce27a04.jpg");
+    background-image: url("./../attachments/gallery/images_2.png");
 }
 #Gallery .container .images .image:nth-child(3) {
-    background-image: url("./../attachments/g4-9fc39936.jpg");
+    background-image: url("./../attachments/gallery/images_3.png");
 }
 #Gallery .container .images .image:nth-child(4) {
-    background-image: url("./../attachments/g6-64027e43.jpg");
+    background-image: url("./../attachments/gallery/images_4.png");
     grid-row: span 2;
 }
 #Gallery .container .images .image:nth-child(5) {
-    background-image: url("./../attachments/g3-1f7cace9.jpg");
+    background-image: url("./../attachments/gallery/images_5.png");
 }
 #Gallery .container .images .image:nth-child(6) {
-    background-image: url("./../attachments/g2-9aae0bfa.jpg");
+    background-image: url("./../attachments/gallery/images_6.png");
 }
 #Gallery .container .images .image:nth-child(7) {
-    background-image: url("./../attachments/g7-9ead7675.jpg");
+    background-image: url("./../attachments/gallery/images_7.png");
 }
 
-.contact .container {
-    width: 100%;
-    padding-bottom: 50px;
-}
-.contact .container iframe {
-    width: 100%;
-    height: 500px;
-    margin-bottom: 50px;
-}
-.contact .container .layout {
-    display: block;
-    max-width: 1400px;
-    margin: auto;
-}
-.contact .container .layout h1 {
-    text-align: center;
-    font-family: var(--fontOswald);
-    font-size: 45px;
-    margin-bottom: 30px;
-    letter-spacing: 2px;
-}
-.contact .container .layout .info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 35px;
-}
-.contact .container .layout .info > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 33%;
-}
-.contact .container .layout .info > div > div {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 60px;
-    background-color: var(--main);
-    border-radius: 50%;
-}
-.contact .container .layout .info > div > div i {
-    font-size: 15px;
-    color: white;
-}
-.contact .container .layout .info > div a {
-    text-decoration: none;
-    color: black;
-    font-family: sans-serif;
-    width: 200px;
-    line-height: 25px;
-    text-align: center;
-}
-.contact .container .layout .info > div:nth-child(2) a {
-    font-family: var(--fontOswald);
-    font-weight: 350;
-    letter-spacing: 2px;
-}
-.contact .container .layout .form {
-    display: block;
-    margin: auto;
-}
-.contact .container .layout .form {
-    width: 90%;
-}
-.contact .container .layout .form form div,
-.contact .container .layout .form form textarea {
-    margin: auto;
-    margin-top: 35px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.contact .container .layout .form form div input {
-    padding: 8px 16px;
-    font-family: var(--fontPTSans);
-    font-size: 16px;
-    width: 32%;
-    border: none;
-    border-bottom: 1px solid var(--main);
-    transition-duration: .5s;
-}
-.contact .container .layout .form form textarea {
-    margin-bottom: 25px;
-    padding: 10px;
-    border: none;
-    resize: none;
-    border-bottom: 1px solid var(--main);
-    height: 200px;
-    font-family: var(--fontPTSans);
-    font-size: 16px;
-    transition-duration: .5s;
-}
-.contact .container .layout .form form div input:focus,
-.contact .container .layout .form form textarea:focus {
-    outline: none;
-    box-shadow: 0 0 5px 0 var(--main);
-}
-.contact .container .layout .form form button {
-    background-color: black;
-    color: white;
-    font-family: var(--fontPTSans);
-    padding: 12px 30px;
-    border: none;
-    border-radius: 5px;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition-duration: 200ms;
-}
-.contact .container .layout .form form button:hover {
-    background-color: rgb(190, 190, 190);
-    color: black;
-}
-.contact .container .layout .form form button:active {
-    transform: scale(0.8);
-}
-
-footer {
-    background-color: #333333;
+.feedback {
     padding-block: 50px;
 }
-footer .container {
+.feedback .container {
     width: 90%;
-    max-width: 1400px;
+    min-width: 1350px;
 }
-footer .container .div {
-    display: flex;
-    justify-content: space-evenly;
-}
-footer .container .div > div {
-    width: 30%;
-}
-footer .container .div > div h2 {
-    font-family: var(--fontOswald);
-    letter-spacing: 2px;
-    color: var(--main);
-    margin-bottom: 25px;
-}
-footer .container .div > div:nth-child(1) ul {
-    display: block;
-}
-footer .container .div > div:nth-child(1) ul li {
-    margin-bottom: 15px;
-}
-footer .container .div > div:nth-child(1) ul li a {
-    color: white;
-    text-decoration: none;
-    font-family: var(--fontPTSans);
-    font-size: 16px;
-    transition-duration: .5s;
-}
-footer .container .div > div:nth-child(1) ul li a:hover {
-    color: var(--main);
-}
-footer .container .div > div:nth-child(2) .images {
-    margin: auto;
-}
-footer .container .div > div:nth-child(2) img {
-    width: 100px;
-    margin-bottom: 15px;
-}
-footer .container .div > div:nth-child(3) {
-    display: block;
-}
-footer .container .div > div:nth-child(3) div {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 3px solid var(--main);
-    margin-bottom: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    width: 90%;
-}
-footer .container > p {
-    margin-block: 20px;
-    text-align: center;
-    color: white;
-    font-size: 20px;
-    font-family: var(--fontOswald);
-    font-weight: 300;
-    letter-spacing: 1px;
-}
-footer .container > p span {
-    color: var(--main);
-}
-footer .container > ul {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-}
-footer .container > ul li {
-    width: 35px;
-    height: 35px;
-    background-color: var(--main);
-    border-radius: 50%;
-}
-footer .container > ul li a {
-    color: white;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-}
+
+
+
+
+
+
+
+
+

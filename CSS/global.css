@@ -6,11 +6,17 @@
 }
 :root {
     --main: #E55556;
+    --red-blue: #e31e1e;
     --fontOswald: Oswald, sans-serif;
     --fontPTSans: PT Sans, sans-serif;
 }
 html {
     scroll-behavior: smooth;
+    background: linear-gradient(#ffffff40), url("./../attachments/counters_bg.png");
+    background-position: left top;
+    background-repeat: repeat;
+    background-size: 90%;
+    background-attachment: fixed;
 }
 .container {
     width: 80%;

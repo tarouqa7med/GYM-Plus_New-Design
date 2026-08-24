@@ -56,3 +56,18 @@ ul {
     border-bottom: 0.5px solid var(--main-text);
     width: 200px;
 }
+
+/* changing theme */
+
+header nav .container .ul ul li input {
+      :root {
+          --main: #E55556;
+          --red-blue: #e31e1e;
+      }
+}
+header nav .container .ul ul li input:checked {
+      :root {
+          --red-blue: #2522ce !important;
+          --red-blue-dark: #09125f !important;
+      }
+}

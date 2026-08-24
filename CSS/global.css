@@ -1,73 +1,60 @@
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
 }
 :root {
-    --main: #E55556;
-    --red-blue: #e31e1e;
-    --red-blue-dark: #a81212;
-    /* --red-blue: #2522ce;
-    --red-blue-dark: #09125f; */
-    --fontOswald: Oswald, sans-serif;
-    --fontPTSans: PT Sans, sans-serif;
+      --main: #E55556;
+      --red-blue: #e31e1e;
+      --red-blue-dark: #a81212;
+      --fontOswald: Oswald, sans-serif;
+      --fontPTSans: PT Sans, sans-serif;
+}
+:root:has(header nav .container .ul ul li input:checked) {
+      --red-blue: #2522ce;
+      --red-blue-dark: #09125f;
 }
 html {
-    scroll-behavior: smooth;
-    background: linear-gradient(#ffffff40), url("./../attachments/counters_bg.png");
-    background-position: left top;
-    background-repeat: repeat;
-    background-size: 90%;
-    background-attachment: fixed;
+      scroll-behavior: smooth;
+      background: linear-gradient(#ffffff40), url("./../attachments/counters_bg.png");
+      background-position: left top;
+      background-repeat: repeat;
+      background-size: 90%;
+      background-attachment: fixed;
 }
 .container {
-    width: 80%;
-    display: block;
-    margin: auto;
+      width: 80%;
+      display: block;
+      margin: auto;
 }
 .left {
-    float: left;
+      float: left;
 }
 .right {
-    float: right;
+      float: right;
 }
 .clearfix {
-    clear: both;
+      clear: both;
 }
 ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
+      display: flex;
+      list-style: none;
+      gap: 20px;
 }
 .container .spans {
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
+      height: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
 }
 .container .spans span:nth-child(odd) {
-    border-bottom: 0.5px solid var(--main-text);
-    width: 85px;
+      border-bottom: 0.5px solid var(--main-text);
+      width: 85px;
 }
 .container .spans span:nth-child(even) {
-    border-bottom: 0.5px solid var(--main-text);
-    width: 200px;
-}
-
-/* changing theme */
-
-header nav .container .ul ul li input {
-      :root {
-          --main: #E55556;
-          --red-blue: #e31e1e;
-      }
-}
-header nav .container .ul ul li input:checked {
-      :root {
-          --red-blue: #2522ce !important;
-          --red-blue-dark: #09125f !important;
-      }
+      border-bottom: 0.5px solid var(--main-text);
+      width: 200px;
 }

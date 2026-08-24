@@ -1,732 +1,964 @@
 
 .arrow {
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-    background-color: transparent;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 1;
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      background-color: transparent;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 1;
 }
 
 header {
-    position: relative;
-    height: 100vh;
-    background: linear-gradient(#00000080), url("./../attachments/header.png");
-    background-position: bottom bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-clip: border-box;
+      position: relative;
+      height: 100vh;
+      background: linear-gradient(#00000080), url("./../attachments/header.png");
+      background-position: bottom bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-clip: border-box;
 }
 header nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid var(--red-blue);
-    backdrop-filter: blur(100px);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--red-blue);
+      backdrop-filter: blur(100px);
 }
 header nav .container {
-    width: 85%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+      width: 85%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 }
 header nav .container input {
-    opacity: 0;
+      opacity: 0;
 }
 header nav .container .responsive {
-    padding: 8px 0;
-    background-color: transparent;
-    border: 2px solid var(--red-blue);
-    border-radius: 5px;
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    transform: translateY(-50%);
-    width: 55px;
-    height: 40px;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
+      padding: 8px 0;
+      background-color: transparent;
+      border: 2px solid var(--red-blue);
+      border-radius: 5px;
+      position: absolute;
+      top: 50%;
+      right: 5%;
+      transform: translateY(-50%);
+      width: 55px;
+      height: 40px;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
 }
 header nav .container .responsive span {
-    width: 65%;
-    height: 6px;
-    background-color: var(--red-blue);
+      width: 65%;
+      height: 6px;
+      background-color: var(--red-blue);
 }
 header nav .container .ul ul {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
 }
 header nav .container .ul ul li {
-    position: relative;
-    cursor: pointer;
+      position: relative;
+      cursor: pointer;
 }
 header nav .container .ul ul li:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--main);
-    transition-duration: 500ms;
-    opacity: 0;
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--main);
+      transition-duration: 500ms;
+      opacity: 0;
 }
 header nav .container .ul ul li:not(:last-child):hover::after {
-    opacity: 1;
+      opacity: 1;
 }
 header nav .container .ul ul li a {
-    color: white;
-    font-family: 'Roboto', cursive;
-    font-size: 16px;
-    font-weight: bolder;
-    letter-spacing: 2px;
-    text-decoration: none;
+      color: white;
+      font-family: 'Roboto', cursive;
+      font-size: 16px;
+      font-weight: bolder;
+      letter-spacing: 2px;
+      text-decoration: none;
 }
 header nav .container .ul ul li label {
-    display: block;
-    width: 60px;
-    height: 30px;
-    border: 1px solid var(--red-blue);
-    border-radius: 20px;
-    position: relative;
-    cursor: pointer;
+      display: block;
+      width: 60px;
+      height: 30px;
+      border: 1px solid var(--red-blue);
+      border-radius: 20px;
+      position: relative;
+      cursor: pointer;
 }
 header nav .container .ul ul li label::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    background-color: var(--red-blue);
-    border-radius: 50%;
-    transition-duration: 250ms;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      background-color: var(--red-blue);
+      border-radius: 50%;
+      transition-duration: 250ms;
 }
 header nav .container .ul ul li input {
-    display: none;
+      display: none;
 }
 header nav .container .ul ul li input:checked + label::before {
-    left: 34px;
+      left: 34px;
 }
 header .hook {
-    position: absolute;
-    top: 35%;
-    left: 100px;
+      position: absolute;
+      top: 35%;
+      left: 100px;
 }
 header .hook h2 {
-    color: #C9C9C9;
-    font-size: 60px;
-    font-family: 'Sora';
-    margin-bottom: 20px;
-    letter-spacing: 8px;
-    text-shadow: -4px 3px 2px  #3f3f3f;
+      color: #C9C9C9;
+      font-size: 60px;
+      font-family: 'Sora';
+      margin-bottom: 20px;
+      letter-spacing: 8px;
+      text-shadow: -4px 3px 2px  #3f3f3f;
 }
 header .hook h3 {
-    color: #C9C9C9;
-    font-size: 30px;
-    font-family: 'Sora';
-    letter-spacing: 5px;
-    margin-bottom: 20px;
-    text-shadow: -4px 3px 2px  #3f3f3f;
+      color: #C9C9C9;
+      font-size: 30px;
+      font-family: 'Sora';
+      letter-spacing: 5px;
+      margin-bottom: 20px;
+      text-shadow: -4px 3px 2px  #3f3f3f;
 }
 header .hook button {
-    background-color: transparent;
-    padding: 14px 25px;
-    color: white;
-    font-size:  18px;
-    font-weight: bolder;
-    letter-spacing: 1px;
-    border: 2px solid var(--red-blue);
-    border-radius: 6px;
-    transition-duration: 200ms;
-    cursor: pointer;
+      background-color: transparent;
+      padding: 14px 25px;
+      color: white;
+      font-size:  18px;
+      font-weight: bolder;
+      letter-spacing: 1px;
+      border: 2px solid var(--red-blue);
+      border-radius: 6px;
+      transition-duration: 200ms;
+      cursor: pointer;
 }
 header .hook button:hover {
-    background-color: transparent;
+      background-color: transparent;
 }
 header .hook button span {
-    margin: 0;
-    position: relative;
-    color: var(--red-blue);
+      margin: 0;
+      position: relative;
+      color: var(--red-blue);
 }
 header .hook button:hover span {
-    color: white;
+      color: white;
 }
 header .hook button:active {
-    border-color: white;
-    transform: scale(0.8);
+      border-color: white;
+      transform: scale(0.8);
 }
 
 
 section.services {
-    padding-block: 50px;
+      padding-block: 50px;
 }
 .services .container {
-    width: 85%;
-    max-width: 1350px;
-    display: block;
+      width: 85%;
+      max-width: 1350px;
+      display: block;
 }
 .services .container .heading {
-    display: block;
-    text-transform: uppercase;
-    font-family: 'Sora';
+      display: block;
+      text-transform: uppercase;
+      font-family: 'Sora';
 }
 .services .container .heading h5 {
-    color: var(--red-blue);
-    font-size: 18px;
-    margin-bottom: 10px;
+      color: var(--red-blue);
+      font-size: 18px;
+      margin-bottom: 10px;
 }
 .services .container .heading h3 {
-    position: relative;
-    font-size: 55px;
-    margin-bottom: 5px;
+      position: relative;
+      font-size: 55px;
+      margin-bottom: 5px;
 }
 .services .container .heading h3::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 110px;
-    height: 5px;
-    background-color: var(--red-blue);
-    border-radius: 10px;
-    animation: h3-before 2s linear 0s infinite alternate forwards;
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 110px;
+      height: 5px;
+      background-color: var(--red-blue);
+      border-radius: 10px;
+      animation: h3-before 2s linear 0s infinite alternate forwards;
 }
 .services .container .heading h3 span {
-    color: var(--red-blue);
+      color: var(--red-blue);
 }
 
 .services .container p.title {
-    margin-block: 30px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    line-height: 30px;
+      margin-block: 30px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+      line-height: 30px;
 }
 .services .container .layout {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
 }
 .services .container .layout .div {
-    padding: 15px;
-    width: calc(20% - 16px);
-    height: 250px;
-    background-color: white;
-    border: 2px solid transparent;
-    border-radius: 10px;
-    box-shadow: 0 0 20px #00000040;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition-duration: 350ms;
+      padding: 15px;
+      width: calc(20% - 16px);
+      height: 250px;
+      background-color: white;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #00000040;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition-duration: 350ms;
 }
 .services .container .layout .div:hover {
-    transform: translateY(-10px);
-    border: 2px solid var(--red-blue);
-    cursor: pointer;
-    transition-delay: 50ms;
+      transform: translateY(-10px);
+      border: 2px solid var(--red-blue);
+      cursor: pointer;
+      transition-delay: 50ms;
 }
 .services .container .layout .div .gif {
-    position: relative;
-    display: block;
-    margin-inline: auto;
-    margin-bottom: 10px;
-    width: 80px;
-    height: 80px;
+      position: relative;
+      display: block;
+      margin-inline: auto;
+      margin-bottom: 10px;
+      width: 80px;
+      height: 80px;
 }
 .services .container .layout .div .gif img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
 }
 .services .container .layout .div p:first-of-type {
-    margin-bottom: 10px;
-    text-align: center;
-    font-family: 'Sora', sans-serif;
-    font-size: 20px;
-    font-weight: bolder;
+      margin-bottom: 10px;
+      text-align: center;
+      font-family: 'Sora', sans-serif;
+      font-size: 20px;
+      font-weight: bolder;
 }
 .services .container .layout .div p:last-of-type {
-    font-family: 'Roboti', sans-serif;
-    font-size: 16px;
-    text-align: center;
-    line-height: 20px;
+      font-family: 'Roboti', sans-serif;
+      font-size: 16px;
+      text-align: center;
+      line-height: 20px;
 }
 .services .container .layout .div hr.line {
-    margin-top: 10px;
-    width: 60px;
-    height: 10px;
-    background-color: #ACACAC;
-    border-radius: 10px;
-    transition-duration: 350ms;
+      margin-top: 10px;
+      width: 60px;
+      height: 10px;
+      background-color: #ACACAC;
+      border-radius: 10px;
+      transition-duration: 350ms;
 }
 .services .container .layout .div:hover hr.line {
-    background-color: var(--red-blue);
+      background-color: var(--red-blue);
 }
 
 section.Classes {
-    padding-block: 50px;
+      padding-block: 50px;
 }
 .Classes .container {
-    width: 85%;
-    max-width: 1350px;
-    display: block;
+      width: 85%;
+      max-width: 1350px;
+      display: block;
 }
 .Classes .container .heading {
-    display: block;
-    text-transform: uppercase;
-    font-family: 'Sora';
+      display: block;
+      text-transform: uppercase;
+      font-family: 'Sora';
 }
 .Classes .container .heading h5 {
-    color: var(--red-blue);
-    font-size: 18px;
-    margin-bottom: 10px;
+      color: var(--red-blue);
+      font-size: 18px;
+      margin-bottom: 10px;
 }
 .Classes .container .heading h3 {
-    position: relative;
-    font-size: 55px;
-    margin-bottom: 5px;
+      position: relative;
+      font-size: 55px;
+      margin-bottom: 5px;
 }
 .Classes .container .heading h3::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 110px;
-    height: 5px;
-    background-color: var(--red-blue);
-    border-radius: 10px;
-    animation: h3-before 2s linear 0s infinite alternate forwards;
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 110px;
+      height: 5px;
+      background-color: var(--red-blue);
+      border-radius: 10px;
+      animation: h3-before 2s linear 0s infinite alternate forwards;
 }
 .Classes .container .heading h3 span {
-    color: var(--red-blue);
+      color: var(--red-blue);
 }
 .Classes .container p.title {
-    margin-block: 30px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    line-height: 30px;
+      margin-block: 30px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+      line-height: 30px;
 }
 .Classes .container .layout {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
 }
 .Classes .container .layout .col {
-    width: calc(100% / 3);
-    height: 320px;
+      width: calc(100% / 3);
+      height: 320px;
 }
 .Classes .container .layout .col .item {
-    display: block;
-    margin: auto;
-    width: fit-content;
-    background-color: blue;
-    width: 90%;
-    height: 260px;
-    position: relative;
-    border-radius: 20px;
-    box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.75);
+      display: block;
+      margin: auto;
+      width: fit-content;
+      width: 90%;
+      height: 260px;
+      position: relative;
+      border-radius: 20px;
+      box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.75);
 }
 .Classes .container .layout .col .item .image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+}
+.Classes .container .layout .col .item .image::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -25%;
+      transform: translateX(-100%) skewX(-35deg);
+      width: 35%;
+      height: 100%;
+      background-color: #ffffff60;
+}
+.Classes .container .layout .col .item:hover .image::after {
+      left: 125%;
+      transform: translateX(0%) skewX(-35deg);
+      transition-duration: 1s;
 }
 .Classes .container .layout .col .item .image img {
-    width: 100%;
-    height: 100%;
-    filter: brightness(80%);
+      width: 100%;
+      height: 100%;
+      filter: brightness(80%);
+      transition-duration: 1s;
+}
+.Classes .container .layout .col .item:hover .image img {
+      scale: 1.2;
 }
 .Classes .container .layout .col .item .details {
-    padding: 10px;
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 95%;
-    height: 125px;
-    background-color: #271f23;
-    color: white;
-    border: 3px solid var(--red-blue);
-    border-radius: 20px;
-    text-align: center;
+      padding: 10px;
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 95%;
+      height: 125px;
+      background-color: #271f23;
+      color: white;
+      border: 3px solid var(--red-blue);
+      border-radius: 20px;
+      text-align: center;
+      transition-duration: 1s;
+}
+.Classes .container .layout .col .item:hover .details {
+      bottom: -40px;
 }
 .Classes .container .layout .col .item .details h3 {
-    margin-bottom: 10px;
-    font-family: 'Roboto', cursive;
-    font-size: 20px;
-    font-weight: 500;
+      margin-bottom: 10px;
+      font-family: 'Roboto', cursive;
+      font-size: 20px;
+      font-weight: 500;
 }
 .Classes .container .layout .col .item .details p {
-    font-family: 'Sora', cursive;
-    font-size: 10px;
-    letter-spacing: 0.75px;
-    color: #E0DDDD;
-    margin-bottom: 10px;
+      font-family: 'Sora', cursive;
+      font-size: 10px;
+      letter-spacing: 0.75px;
+      color: #E0DDDD;
+      margin-bottom: 10px;
 }
 .Classes .container .layout .col .item .details button {
-    padding: 8px 15px;
-    text-decoration: none;
-    background-color: transparent;
-    color: white;
-    border: 2px solid var(--red-blue);
-    border-radius: 10px;
-    width: fit-content;
+      padding: 8px 15px;
+      text-decoration: none;
+      background-color: transparent;
+      color: white;
+      border: 2px solid var(--red-blue);
+      border-radius: 10px;
+      width: fit-content;
+      cursor: pointer;
+      transition-duration: 500ms;
+}
+.Classes .container .layout .col .item .details button:hover {
+      background-color: var(--red-blue);
 }
 .Classes .container .layout .col .item .details button span {
-    font-family: 'Arial';
+      font-family: 'Arial';
+      transition-duration: 500ms;
+}
+.Classes .container .layout .col .item .details button:hover span {
+      margin-right: 5px;
 }
 
 section.trainers {
-    padding-block: 50px;
+      padding-block: 50px;
 }
 .trainers .container {
-    width: 85%;
-    max-width: 1350px;
-    display: block;
+      width: 85%;
+      max-width: 1350px;
+      display: block;
 }
 .trainers .container .heading {
-    display: block;
-    text-transform: uppercase;
-    font-family: 'Sora';
+      display: block;
+      text-transform: uppercase;
+      font-family: 'Sora';
 }
 .trainers .container .heading h5 {
-    color: var(--red-blue);
-    font-size: 18px;
-    margin-bottom: 10px;
+      color: var(--red-blue);
+      font-size: 18px;
+      margin-bottom: 10px;
 }
 .trainers .container .heading h3 {
-    position: relative;
-    font-size: 55px;
-    margin-bottom: 5px;
+      position: relative;
+      font-size: 55px;
+      margin-bottom: 5px;
 }
 .trainers .container .heading h3::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 110px;
-    height: 5px;
-    background-color: var(--red-blue);
-    border-radius: 10px;
-    animation: h3-before 2s linear 0s infinite alternate forwards;
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 110px;
+      height: 5px;
+      background-color: var(--red-blue);
+      border-radius: 10px;
+      animation: h3-before 2s linear 0s infinite alternate forwards;
 }
 .trainers .container .heading h3 span {
-    color: var(--red-blue);
+      color: var(--red-blue);
 }
 .trainers .container p.title {
-    margin-block: 30px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    line-height: 30px;
+      margin-block: 30px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+      line-height: 30px;
 }
 .trainers .container .layout {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
 }
 .trainers .container .layout .col {
-    width: calc(25% - 15px);
-    background-color: red;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 5px 4px 25px #00000025;
+      width: calc(25% - 15px);
+      background-color: red;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 5px 4px 25px #00000025;
 }
 .trainers .container .layout .col .item {
-    display: block;
-    margin: auto;
-    padding-block: 35px;
-    width: 100%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+      display: block;
+      margin: auto;
+      padding-block: 35px;
+      width: 100%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
 }
 .trainers .container .layout .col .item .image {
-    width: 175px;
-    height: 175px;
-    display: block;
-    margin: auto;
-    margin-bottom: 20px;
-    border: 2px solid var(--red-blue);
-    border-radius: 50%;
-    overflow: hidden;
-    transition-duration: 500ms;
+      width: 175px;
+      height: 175px;
+      display: block;
+      margin: auto;
+      margin-bottom: 20px;
+      border: 2px solid var(--red-blue);
+      border-radius: 50%;
+      overflow: hidden;
+      transition-duration: 500ms;
 }
 .trainers .container .layout .col:hover .item .image {
-    box-shadow: 0 0 4px 4px color-mix(in srgb, var(--red-blue) 30%, transparent 70%);
+      box-shadow: 0 0 4px 4px color-mix(in srgb, var(--red-blue) 30%, transparent 70%);
 }
 .trainers .container .layout .col .item .image img {
-    width: 100%;
+      width: 100%;
 }
 .trainers .container .layout .col .item .trainer_name-job {
-    font-family: 'Sora', cursive;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 10px;
+      font-family: 'Sora', cursive;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 10px;
 }
 .trainers .container .layout .col .item .trainer_name-job h3.name {
-    font-size: 24px;
-    margin-bottom: 10px;
+      font-size: 24px;
+      margin-bottom: 10px;
 }
 .trainers .container .layout .col .item .trainer_name-job p.job {
-    font-size: 15px;
-    font-weight: bolder;
-    color: var(--red-blue);
+      font-size: 15px;
+      font-weight: bolder;
+      color: var(--red-blue);
 }
 .trainers .container .layout .col .item .ul-1 {
-    display: flex;
-    margin: auto;
-    width: fit-content;
-    margin-bottom: 30px;
+      display: flex;
+      margin: auto;
+      width: fit-content;
+      margin-bottom: 30px;
 }
 .trainers .container .layout .col .item .ul-1 ul {
-    gap: 0px;
-    margin-right: 4px;
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
+      gap: 0px;
+      margin-right: 4px;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
 }
 .trainers .container .layout .col .item .ul-1 ul::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--red-blue);
-    transition-duration: 250ms;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--red-blue);
+      transition-duration: 250ms;
 }
 .trainers .container .layout .col:hover .item .ul-1 ul::before {
-    left: 100%;
+      left: 100%;
 }
 .trainers .container .layout .col .item .ul-1 ul li i {
-    font-size: 14px;
-    color: var(--red-blue);
+      font-size: 14px;
+      color: var(--red-blue);
 }
 .trainers .container .layout .col .item .ul-1 ul li.i-solid i {
-    position: absolute;
-    top: 2px;
-    opacity: 0;
-    transition-duration: 250ms;
+      position: absolute;
+      top: 2px;
+      opacity: 0;
+      transition-duration: 250ms;
 }
 .trainers .container .layout .col .item .ul-1 ul li.i-solid:nth-child(1) i {
-    left: 0;
+      left: 0;
 }
 .trainers .container .layout .col .item .ul-1 ul li.i-solid:nth-child(2) i {
-    left: 20%;
+      left: 20%;
 }
 .trainers .container .layout .col .item .ul-1 ul li.i-solid:nth-child(3) i {
-    left: 40%;
+      left: 40%;
 }
 .trainers .container .layout .col .item .ul-1 ul li.i-solid:nth-child(4) i {
-    left: 60%;
+      left: 60%;
 }
 .trainers .container .layout .col .item .ul-1 ul li.i-solid:nth-child(5) i {
-    left: 80%;
+      left: 80%;
 }
 .trainers .container .layout .col:hover .item .ul-1 ul li.i-solid:nth-child(1) i {
-    transition-delay: 125ms;
+      transition-delay: 125ms;
 }
 .trainers .container .layout .col:hover .item .ul-1 ul li.i-solid:nth-child(2) i {
-    transition-delay: 250ms;
+      transition-delay: 250ms;
 }
 .trainers .container .layout .col:hover .item .ul-1 ul li.i-solid:nth-child(3) i {
-    transition-delay: 375ms;
+      transition-delay: 375ms;
 }
 .trainers .container .layout .col:hover .item .ul-1 ul li.i-solid:nth-child(4) i {
-    transition-delay: 500ms;
+      transition-delay: 500ms;
 }
 .trainers .container .layout .col:hover .item .ul-1 ul li.i-solid:nth-child(5) i {
-    transition-delay: 625ms;
+      transition-delay: 625ms;
 }
 .trainers .container .layout .col:hover .item .ul-1 ul li.i-solid i {
-    opacity: 1;
+      opacity: 1;
 }
 .trainers .container .layout .col .item .ul-1 p {
-    font-weight: 600;
-    font-family: 'Roboto', cursive;
-    font-size: 16px;
+      font-weight: 600;
+      font-family: 'Roboto', cursive;
+      font-size: 16px;
 }
 .trainers .container .layout .col .item .ul-1 p:first-of-type {
-    margin-right: 4px;
+      margin-right: 4px;
 }
 .trainers .container .layout .col .item .ul-1 p:last-of-type {
-    color: var(--red-blue);
+      color: var(--red-blue);
 }
 .trainers .container .layout .col .item .ul-2 {
-    margin-bottom: 25px;
+      margin-bottom: 25px;
 }
 .trainers .container .layout .col .item .ul-2 ul {
-    gap: 10px;
+      gap: 10px;
 }
 .trainers .container .layout .col .item .ul-2 ul li {
-    padding: 8px;
-    box-shadow: 0 0 5px 3px #00000025;
-    border-radius: 20px;
-    font-family: 'Sora', cursive;
-    font-size: 12px;
+      padding: 8px;
+      box-shadow: 0 0 5px 3px #00000025;
+      border-radius: 20px;
+      font-family: 'Sora', cursive;
+      font-size: 12px;
 }
 .trainers .container .layout .col .item .ul-3 {
-    width: 150px;
-    margin-bottom: 20px;
+      width: 150px;
+      margin-bottom: 20px;
 }
 .trainers .container .layout .col .item .ul-3 ul {
-    display: flex;
-    justify-content: space-between;
+      display: flex;
+      justify-content: space-between;
+}
+.trainers .container .layout .col .item .ul-3 ul li a {
+      text-decoration: none;
 }
 .trainers .container .layout .col .item .ul-3 ul li a i {
-    font-size: 20px;
-    color: var(--red-blue);
+      font-size: 20px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--red-blue);
+      transition-duration: 500ms;
+}
+.trainers .container .layout .col .item .ul-3 ul li a i:hover {
+      background-color: var(--red-blue);
+      color: white;
 }
 .trainers .container .layout .col .item button {
-    padding: 10px 20px;
-    position: relative;
-    border: 2px solid var(--red-blue);
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
+      padding: 10px 20px;
+      position: relative;
+      border: 2px solid var(--red-blue);
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
 }
 .trainers .container .layout .col .item button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: var(--red-blue);
-    transition-duration: 250ms;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: var(--red-blue);
+      transition-duration: 250ms;
 }
 .trainers .container .layout .col .item button:hover::before {
-    left: 0;
+      left: 0;
 }
 .trainers .container .layout .col .item button span {
-    position: relative;
-    font-size: 18px;
-    font-family: 'Arial', cursive;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: var(--red-blue);
-    transition-duration: 250ms;
+      position: relative;
+      font-size: 18px;
+      font-family: 'Arial', cursive;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: var(--red-blue);
+      transition-duration: 250ms;
 }
 .trainers .container .layout .col .item button:hover span {
-    color: white;
+      color: white;
 }
 
 section#Gallery {
-    padding-block: 50px;
+      padding-block: 50px;
 }
 #Gallery .container {
-    width: 85%;
-    max-width: 1350px;
-    display: block;
+      width: 85%;
+      max-width: 1350px;
+      display: block;
 }
 #Gallery .container .heading {
-    display: block;
-    text-transform: uppercase;
-    font-family: 'Sora';
+      display: block;
+      text-transform: uppercase;
+      font-family: 'Sora';
 }
 #Gallery .container .heading h5 {
-    color: var(--red-blue);
-    font-size: 18px;
-    margin-bottom: 10px;
+      color: var(--red-blue);
+      font-size: 18px;
+      margin-bottom: 10px;
 }
 #Gallery .container .heading h3 {
-    position: relative;
-    font-size: 55px;
-    margin-bottom: 5px;
+      position: relative;
+      font-size: 55px;
+      margin-bottom: 5px;
 }
 #Gallery .container .heading h3::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 110px;
-    height: 5px;
-    background-color: var(--red-blue);
-    border-radius: 10px;
-    animation: h3-before 2s linear 0s infinite alternate forwards;
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 110px;
+      height: 5px;
+      background-color: var(--red-blue);
+      border-radius: 10px;
+      animation: h3-before 2s linear 0s infinite alternate forwards;
 }
 #Gallery .container .heading h3 span {
-    color: var(--red-blue);
+      color: var(--red-blue);
 }
 #Gallery .container p.title {
-    margin-block: 30px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    line-height: 30px;
+      margin-block: 30px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+      line-height: 30px;
 }
 #Gallery .container .images {
-    display: grid;
-    grid-template-columns: repeat(3, 450px);
-    grid-template-rows: repeat(3, 300px);
-    width: fit-content;
-    margin: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 15px black;
-    overflow: hidden;
+      display: grid;
+      grid-template-columns: repeat(3, 450px);
+      grid-template-rows: repeat(3, 300px);
+      width: fit-content;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 15px black;
+      overflow: hidden;
 }
 #Gallery .container .images .image {
-    position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
 
 }
 #Gallery .container .images .image:nth-child(1) {
-    background-image: url("./../attachments/gallery/images_1.png");
-    grid-row: span 2;
+      background-image: url("./../attachments/gallery/images_1.png");
+      grid-row: span 2;
 
 }
 #Gallery .container .images .image:nth-child(2) {
-    background-image: url("./../attachments/gallery/images_2.png");
+      background-image: url("./../attachments/gallery/images_2.png");
 }
 #Gallery .container .images .image:nth-child(3) {
-    background-image: url("./../attachments/gallery/images_3.png");
+      background-image: url("./../attachments/gallery/images_3.png");
 }
 #Gallery .container .images .image:nth-child(4) {
-    background-image: url("./../attachments/gallery/images_4.png");
-    grid-row: span 2;
+      background-image: url("./../attachments/gallery/images_4.png");
+      grid-row: span 2;
 }
 #Gallery .container .images .image:nth-child(5) {
-    background-image: url("./../attachments/gallery/images_5.png");
+      background-image: url("./../attachments/gallery/images_5.png");
 }
 #Gallery .container .images .image:nth-child(6) {
-    background-image: url("./../attachments/gallery/images_6.png");
+      background-image: url("./../attachments/gallery/images_6.png");
 }
 #Gallery .container .images .image:nth-child(7) {
-    background-image: url("./../attachments/gallery/images_7.png");
+      background-image: url("./../attachments/gallery/images_7.png");
 }
 
 .feedback {
-    padding-block: 50px;
+      padding-block: 50px;
 }
 .feedback .container {
-    width: 90%;
-    min-width: 1350px;
+      width: 85% ;
+      max-width: 1350px;
+}
+.feedback .container .title p {
+      font-family: 'Sora', cursive;
+      font-size: 64px;
+      text-transform: uppercase;
+      width: fit-content;
+}
+.feedback .container .title p span {
+      position: relative;
+      margin-right: 5px;
+      color: white;
+      padding-inline: 10px;
+      font-style: italic;
+      text-align: center;
+      transform: skewX(-15deg);
+}
+.feedback .container .title p span::before {
+      content: "";
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      padding-right: 5px;
+      transform: skewX(-15deg);
+      width: 100%;
+      height: 100%;
+      background-color: var(--red-blue);
+      z-index: -1;
+}
+.feedback .container .layout .col-1 {
+      margin-top: 35px;
+      border-top: 1px solid black;
+}
+.feedback .container .layout .col-1 div {
+      margin-block: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+.feedback .container .layout .col-1 div .col {
+      margin-block: 20px;
+      width: calc(100% / 3);
+      display: flex;
+      flex-direction: column;
+      font-family: 'Roboto', cursive;
+}
+.feedback .container .layout .col-1 div .col p:first-of-type {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 5px;
+}
+.feedback .container .layout .col-1 div .col p:last-of-type {
+      font-size: 10px;
+      text-transform: uppercase;
+      color: #271f23;
+}
+.feedback .container .layout .col-2 {
+      margin: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+}
+.feedback .container .layout .col-2 .item {
+      padding: 30px 25px;
+      width: calc((100% / 3) - 30px);
+      height: 250px;
+      background-color: white;
+      border: 1px solid var(--red-blue);
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: start;
+      font-family: 'Roboto', cursive;
+}
+.feedback .container .layout .col-2 .item > div:first-of-type {
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      width: 100%;
+      border-bottom: 1px solid color-mix(in srgb, var(--red-blue) 15%, transparent 85%);
+}
+.feedback .container .layout .col-2 .item > div:first-of-type p:first-of-type {
+      margin-bottom: 5px;
+      font-size: 35px;
+      font-weight: bold;
+      color: var(--red-blue-dark);
+}
+.feedback .container .layout .col-2 .item > div:first-of-type p:last-of-type {
+      font-size: 10px;
+      text-transform: uppercase;
+}
+.feedback .container .layout .col-2 .item > p {
+      font-style: italic;
+      font-size: 14px;
+      font-weight: 500;
+}
+.feedback .container .layout .col-2 .item > div:last-of-type {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.feedback .container .layout .col-2 .item > div:last-of-type span.abbr {
+      background: linear-gradient(135deg, var(--red-blue), var(--red-blue-dark));
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      margin-right: 10px;
+}
+.feedback .container .layout .col-2 .item > div:last-of-type div {
+    height: max-content;
+}
+.feedback .container .layout .col-2 .item > div:last-of-type div p:first-of-type {
+      font-weight: bold;
+      font-size: 13px;
+      margin: 0;
+}
+.feedback .container .layout .col-2 .item > div:last-of-type div p:last-of-type {
+      font-size: 10px;
+      margin: 0;
+}
+
+section.contact {
+      padding-block: 50px;
+}
+.contact .container {
+      width: 85%;
+      max-width: 1350px;
+      display: block;
+}
+.contact .container .heading {
+      display: block;
+      text-transform: uppercase;
+      font-family: 'Sora';
+}
+.contact .container .heading h5 {
+      color: var(--red-blue);
+      font-size: 18px;
+      margin-bottom: 10px;
+}
+.contact .container .heading h3 {
+      position: relative;
+      font-size: 55px;
+      margin-bottom: 5px;
+}
+.contact .container .heading h3::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 110px;
+      height: 5px;
+      background-color: var(--red-blue);
+      border-radius: 10px;
+      animation: h3-before 2s linear 0s infinite alternate forwards;
+}
+.contact .container .heading h3 span {
+      color: var(--red-blue);
+}
+.contact .container p.title {
+      margin-block: 30px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+      line-height: 30px;
+}
+.contact .container .layout {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.contact .container .layout .col {
+      width: 50%;
+      height: 500px;
+      background-color: white;
+}
+.contact .container .layout .col .form,
+.contact .container .layout .col .map {
+      padding: 30px;
+      width: 90%;
+      display: block;
+      margin: auto;
+      border: 3px solid var(--red-blue);
+      border-radius: 10px;
 }
 
 
@@ -736,4 +968,21 @@ section#Gallery {
 
 
 
-
+footer {
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #271f23;
+}
+footer p {
+      color: #E0DDDD;
+      font-family: 'Roboto', cursive;
+}
+footer p span {
+      font-weight: bolder;
+      font-size: 16px;
+      color: var(--red-blue);
+      letter-spacing: 1.5px;
+      filter: drop-shadow(0 0 5px #ffffff40) drop-shadow(0 0 5px #ffffff40) drop-shadow(0 0 5px #ffffff40);
+}

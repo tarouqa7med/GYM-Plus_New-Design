@@ -7,6 +7,9 @@
 :root {
     --main: #E55556;
     --red-blue: #e31e1e;
+    --red-blue-dark: #a81212;
+    /* --red-blue: #2522ce;
+    --red-blue-dark: #09125f; */
     --fontOswald: Oswald, sans-serif;
     --fontPTSans: PT Sans, sans-serif;
 }

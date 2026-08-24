@@ -185,6 +185,36 @@ header .hook button {
       border-radius: 6px;
       transition-duration: 0.5s;
       cursor: pointer;
+      position: relative;
+      overflow: hidden;
+}
+header .hook button::before,
+header .hook button::after {
+      content: "";
+      position: absolute;
+      top: -75%;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: var(--red-blue);
+      transition: all linear 0.5s .5s, top linear 0.5s 0s;
+}
+header .hook button::after {
+      top: unset;
+      left: unset;
+      bottom: -75%;
+      right: -100%;
+      transition: all linear 0.5s .5s, bottom linear 0.5s 0s;
+}
+header .hook button:hover::before {
+      left: 0;
+      top: -50%;
+      transition: all linear 0.5s, top linear 0.5s .5s;
+}
+header .hook button:hover::after {
+      right: 0;
+      bottom: -50%;
+      transition: all linear 0.5s, bottom linear 0.5s .5s;
 }
 header .hook button:hover {
       background-color: transparent;
@@ -192,11 +222,13 @@ header .hook button:hover {
 header .hook button span {
       margin: 0;
       position: relative;
+      z-index: 2;
       color: var(--red-blue);
       transition-duration: 0.5s
 }
 header .hook button:hover span {
       color: white;
+      transition-delay: 0.5s;
 }
 header .hook button:active {
       border-color: white;
@@ -1104,7 +1136,6 @@ section.contact {
       bottom: -50%;
       transition: all linear 0.5s, bottom linear 0.5s .5s;
 }
-
 .contact .container .layout .col .form form button span {
       font-size: 18px;
       font-weight: bold;

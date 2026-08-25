@@ -31,7 +31,7 @@ header {
       position: relative;
       height: 100vh;
       background: linear-gradient(#00000080), url("./../attachments/header.png");
-      background-position: center;
+      background-position: center top;
       background-repeat: no-repeat;
       background-size: cover;
       background-clip: border-box;

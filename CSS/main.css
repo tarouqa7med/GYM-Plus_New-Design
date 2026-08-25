@@ -31,7 +31,7 @@ header {
       position: relative;
       height: 100vh;
       background: linear-gradient(#00000080), url("./../attachments/header.png");
-      background-position: bottom bottom;
+      background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       background-clip: border-box;
@@ -57,6 +57,7 @@ header > .container nav {
       border-bottom: 1px solid var(--red-blue);
       backdrop-filter: blur(100px);
       transition-duration: 0.5s;
+      z-index: 3;
 }
 header > .container nav .container {
       margin: auto;
@@ -67,7 +68,7 @@ header > .container nav .container {
       align-items: center;
 }
 header > .container nav .container input {
-      opacity: 0;
+      display: none;
 }
 header > .container nav .container .responsive {
       padding: 8px 0;
@@ -181,22 +182,25 @@ header > .container .hook h3 {
       margin-bottom: 20px;
       text-shadow: -4px 3px 2px  #3f3f3f;
 }
-header > .container .hook button {
+header > .container .hook a {
       background-color: transparent;
       padding: 14px 25px;
-      color: white;
+      font-family: 'Sora', cursive;
       font-size:  18px;
+      text-decoration: none;
       font-weight: bolder;
       letter-spacing: 1px;
       border: 2px solid var(--red-blue);
       border-radius: 6px;
       transition-duration: 0.5s;
       cursor: pointer;
+      display: block;
+      width: fit-content;
       position: relative;
       overflow: hidden;
 }
-header > .container .hook button::before,
-header > .container .hook button::after {
+header > .container .hook a::before,
+header > .container .hook a::after {
       content: "";
       position: absolute;
       top: -75%;
@@ -206,38 +210,38 @@ header > .container .hook button::after {
       background-color: var(--red-blue);
       transition: all linear 0.5s .5s, top linear 0.5s 0s;
 }
-header > .container .hook button::after {
+header > .container .hook a::after {
       top: unset;
       left: unset;
       bottom: -75%;
       right: -100%;
       transition: all linear 0.5s .5s, bottom linear 0.5s 0s;
 }
-header > .container .hook button:hover::before {
+header > .container .hook a:hover::before {
       left: 0;
       top: -50%;
       transition: all linear 0.5s, top linear 0.5s .5s;
 }
-header > .container .hook button:hover::after {
+header > .container .hook a:hover::after {
       right: 0;
       bottom: -50%;
       transition: all linear 0.5s, bottom linear 0.5s .5s;
 }
-header > .container .hook button:hover {
+header > .container .hook a:hover {
       background-color: transparent;
 }
-header > .container .hook button span {
+header > .container .hook a span {
       margin: 0;
       position: relative;
       z-index: 2;
       color: var(--red-blue);
       transition-duration: 0.5s
 }
-header > .container .hook button:hover span {
+header > .container .hook a:hover span {
       color: white;
       transition-delay: 0.5s;
 }
-header > .container .hook button:active {
+header > .container .hook a:active {
       border-color: white;
       transform: scale(0.8);
 }
@@ -362,17 +366,17 @@ section.Classes {
 }
 .Classes .container .layout .col {
       width: calc(100% / 3);
-      height: 320px;
+      margin-bottom: 50px;
 }
 .Classes .container .layout .col .item {
       display: block;
       margin: auto;
       width: fit-content;
       width: 90%;
-      height: 250px;
       position: relative;
       border-radius: 20px;
       box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.75);
+      aspect-ratio: 3/2;
 }
 .Classes .container .layout .col .item .image {
       position: absolute;
@@ -414,7 +418,7 @@ section.Classes {
       left: 50%;
       transform: translateX(-50%);
       width: 95%;
-      height: 125px;
+      height: auto;
       background-color: #271f23;
       color: white;
       border: 3px solid var(--red-blue);
@@ -870,7 +874,7 @@ section#Gallery {
       margin-right: 10px;
 }
 .feedback .container .layout .col-2 .item > div:last-of-type div {
-    height: max-content;
+      height: max-content;
 }
 .feedback .container .layout .col-2 .item > div:last-of-type div p:first-of-type {
       font-weight: bold;
@@ -1037,6 +1041,7 @@ footer {
 footer p {
       color: #E0DDDD;
       font-family: 'Roboto', sans-serif;
+      text-align: center;
 }
 footer p span {
       font-weight: bolder;

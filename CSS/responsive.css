@@ -1,0 +1,61 @@
+
+@media screen and (max-width: 370.98px) {
+
+}
+@media screen and (min-width: 371px) and (max-width: 575.98px) {
+
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+
+      
+}
+@media screen and (min-width: 992px) and (max-width: 1299.98px) {
+
+      header > .container {
+            width: 90%;
+      }
+      header > .container nav {
+            height: 105px;
+      }
+      header > .container nav .container {
+            width: 90%;
+      }
+      header > .container .hook h2 {
+            letter-spacing: 3px;
+      }
+      section .container {
+            width: 90% !important;
+      }
+      section .container .heading h3 {
+            font-size: 45px;
+      }
+      .services .container .layout {
+            justify-content: center;
+            gap: 35px;
+      }
+      .trainers .container .layout {
+            gap: 25px;
+      }
+      .services .container .layout .div {
+            width: calc(20% - 15px);
+      }
+      .trainers .container .layout .col {
+            width: calc(50% - 15px);
+            box-shadow: none;
+            overflow: unset;
+      }
+      .trainers .container .layout .col .item {
+            width: 65%;
+            box-shadow: 5px 4px 25px #00000025;
+            border-radius: 15px;
+      }
+}
+@media screen and (min-width: 1400px) {
+
+      .services .container .layout .div {
+            height: 250px;
+      }
+}

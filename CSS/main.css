@@ -36,7 +36,16 @@ header {
       background-size: cover;
       background-clip: border-box;
 }
-header nav {
+header > .container {
+      margin: auto;
+      width: 80%;
+      max-width: 1400px;
+      height: 100%;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+}
+header > .container nav {
       position: absolute;
       top: 0;
       left: 0;
@@ -49,16 +58,18 @@ header nav {
       backdrop-filter: blur(100px);
       transition-duration: 0.5s;
 }
-header nav .container {
-      width: 85%;
+header > .container nav .container {
+      margin: auto;
+      width: 80%;
+      max-width: 1400px;
       display: flex;
       justify-content: space-between;
       align-items: center;
 }
-header nav .container input {
+header > .container nav .container input {
       opacity: 0;
 }
-header nav .container .responsive {
+header > .container nav .container .responsive {
       padding: 8px 0;
       background-color: transparent;
       border: 2px solid var(--red-blue);
@@ -76,22 +87,23 @@ header nav .container .responsive {
       gap: 8px;
       transition-duration: 0.5s;
 }
-header nav .container .responsive span {
+header > .container nav .container .responsive span {
       width: 65%;
       height: 6px;
       background-color: var(--red-blue);
       transition-duration: 0.5s;
 }
-header nav .container .ul ul {
+header > .container nav .container .ul ul {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
+      gap: 0;
 }
-header nav .container .ul ul li {
+header > .container nav .container .ul ul li {
       position: relative;
       cursor: pointer;
 }
-header nav .container .ul ul li a {
+header > .container nav .container .ul ul li a {
       padding: 8px;
       font-family: 'Roboto', sans-serif;
       font-size: 16px;
@@ -103,7 +115,7 @@ header nav .container .ul ul li a {
       position: relative;
       overflow: hidden;
 }
-header nav .container .ul ul li a::before {
+header > .container nav .container .ul ul li a::before {
       content: "";
       position: absolute;
       top: 135%;
@@ -115,17 +127,17 @@ header nav .container .ul ul li a::before {
       border-radius: 100%;
       transition: top linear 0.3s 0.5s, width linear 0.5s 0s, height linear 0.5s 0s, border-radius linear 0.5s 0.3s;
 }
-header nav .container .ul ul li a:hover::before {
+header > .container nav .container .ul ul li a:hover::before {
       top: 50%;
       width: 100%;
       height: 100%;
       border-radius: 5px;
       transition: top linear 0.3s, width linear 0.5s 0.3s, height linear 0.5s 0.3s, border-radius linear 0.5s 0.3s;
 }
-header nav .container .ul ul li a span {
+header > .container nav .container .ul ul li a span {
       position: relative;
 }
-header nav .container .ul ul li label {
+header > .container nav .container .ul ul li label {
       display: block;
       width: 60px;
       height: 30px;
@@ -135,7 +147,7 @@ header nav .container .ul ul li label {
       cursor: pointer;
       transition-duration: 0.5s;
 }
-header nav .container .ul ul li label::before {
+header > .container nav .container .ul ul li label::before {
       content: "";
       position: absolute;
       top: 50%;
@@ -147,18 +159,13 @@ header nav .container .ul ul li label::before {
       border-radius: 50%;
       transition-duration: 250ms;
 }
-header nav .container .ul ul li input {
+header > .container nav .container .ul ul li input {
       display: none;
 }
-header nav .container .ul ul li input:checked + label::before {
+header > .container nav .container .ul ul li input:checked + label::before {
       left: 34px;
 }
-header .hook {
-      position: absolute;
-      top: 35%;
-      left: 100px;
-}
-header .hook h2 {
+header > .container .hook h2 {
       color: #C9C9C9;
       font-size: 60px;
       font-family: 'Sora';
@@ -166,7 +173,7 @@ header .hook h2 {
       letter-spacing: 8px;
       text-shadow: -4px 3px 2px  #3f3f3f;
 }
-header .hook h3 {
+header > .container .hook h3 {
       color: #C9C9C9;
       font-size: 30px;
       font-family: 'Sora';
@@ -174,7 +181,7 @@ header .hook h3 {
       margin-bottom: 20px;
       text-shadow: -4px 3px 2px  #3f3f3f;
 }
-header .hook button {
+header > .container .hook button {
       background-color: transparent;
       padding: 14px 25px;
       color: white;
@@ -188,8 +195,8 @@ header .hook button {
       position: relative;
       overflow: hidden;
 }
-header .hook button::before,
-header .hook button::after {
+header > .container .hook button::before,
+header > .container .hook button::after {
       content: "";
       position: absolute;
       top: -75%;
@@ -199,38 +206,38 @@ header .hook button::after {
       background-color: var(--red-blue);
       transition: all linear 0.5s .5s, top linear 0.5s 0s;
 }
-header .hook button::after {
+header > .container .hook button::after {
       top: unset;
       left: unset;
       bottom: -75%;
       right: -100%;
       transition: all linear 0.5s .5s, bottom linear 0.5s 0s;
 }
-header .hook button:hover::before {
+header > .container .hook button:hover::before {
       left: 0;
       top: -50%;
       transition: all linear 0.5s, top linear 0.5s .5s;
 }
-header .hook button:hover::after {
+header > .container .hook button:hover::after {
       right: 0;
       bottom: -50%;
       transition: all linear 0.5s, bottom linear 0.5s .5s;
 }
-header .hook button:hover {
+header > .container .hook button:hover {
       background-color: transparent;
 }
-header .hook button span {
+header > .container .hook button span {
       margin: 0;
       position: relative;
       z-index: 2;
       color: var(--red-blue);
       transition-duration: 0.5s
 }
-header .hook button:hover span {
+header > .container .hook button:hover span {
       color: white;
       transition-delay: 0.5s;
 }
-header .hook button:active {
+header > .container .hook button:active {
       border-color: white;
       transform: scale(0.8);
 }
@@ -244,36 +251,6 @@ section.services {
       max-width: 1350px;
       display: block;
 }
-.services .container .heading {
-      display: block;
-      text-transform: uppercase;
-      font-family: 'Sora';
-}
-.services .container .heading h5 {
-      color: var(--red-blue);
-      font-size: 18px;
-      margin-bottom: 10px;
-}
-.services .container .heading h3 {
-      position: relative;
-      font-size: 55px;
-      margin-bottom: 5px;
-}
-.services .container .heading h3::after {
-      content: "";
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 110px;
-      height: 5px;
-      background-color: var(--red-blue);
-      border-radius: 10px;
-      animation: h3-before 2s linear 0s infinite alternate forwards;
-}
-.services .container .heading h3 span {
-      color: var(--red-blue);
-}
-
 .services .container p.title {
       margin-block: 30px;
       font-family: 'Roboto', sans-serif;
@@ -289,7 +266,7 @@ section.services {
 .services .container .layout .div {
       padding: 15px;
       width: calc(20% - 16px);
-      height: 250px;
+      height: 275px;
       background-color: white;
       border: 2px solid transparent;
       border-radius: 10px;
@@ -322,7 +299,7 @@ section.services {
       display: block;
       z-index: 0;
 }
-:root:has(header nav .container .ul ul li input) {
+:root:has(header > .container nav .container .ul ul li input) {
       .services .container .layout .div .gif img.red-image {
             display: block;
       }
@@ -330,7 +307,7 @@ section.services {
             display: none;
       }
 }
-:root:has(header nav .container .ul ul li input:checked) {
+:root:has(header > .container nav .container .ul ul li input:checked) {
       .services .container .layout .div .gif img.red-image {
             display: none;
       }
@@ -371,35 +348,6 @@ section.Classes {
       max-width: 1350px;
       display: block;
 }
-.Classes .container .heading {
-      display: block;
-      text-transform: uppercase;
-      font-family: 'Sora';
-}
-.Classes .container .heading h5 {
-      color: var(--red-blue);
-      font-size: 18px;
-      margin-bottom: 10px;
-}
-.Classes .container .heading h3 {
-      position: relative;
-      font-size: 55px;
-      margin-bottom: 5px;
-}
-.Classes .container .heading h3::after {
-      content: "";
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 110px;
-      height: 5px;
-      background-color: var(--red-blue);
-      border-radius: 10px;
-      animation: h3-before 2s linear 0s infinite alternate forwards;
-}
-.Classes .container .heading h3 span {
-      color: var(--red-blue);
-}
 .Classes .container p.title {
       margin-block: 30px;
       font-family: 'Roboto', sans-serif;
@@ -421,7 +369,7 @@ section.Classes {
       margin: auto;
       width: fit-content;
       width: 90%;
-      height: 260px;
+      height: 250px;
       position: relative;
       border-radius: 20px;
       box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.75);
@@ -520,35 +468,6 @@ section.trainers {
       max-width: 1350px;
       display: block;
 }
-.trainers .container .heading {
-      display: block;
-      text-transform: uppercase;
-      font-family: 'Sora';
-}
-.trainers .container .heading h5 {
-      color: var(--red-blue);
-      font-size: 18px;
-      margin-bottom: 10px;
-}
-.trainers .container .heading h3 {
-      position: relative;
-      font-size: 55px;
-      margin-bottom: 5px;
-}
-.trainers .container .heading h3::after {
-      content: "";
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 110px;
-      height: 5px;
-      background-color: var(--red-blue);
-      border-radius: 10px;
-      animation: h3-before 2s linear 0s infinite alternate forwards;
-}
-.trainers .container .heading h3 span {
-      color: var(--red-blue);
-}
 .trainers .container p.title {
       margin-block: 30px;
       font-family: 'Roboto', sans-serif;
@@ -564,7 +483,6 @@ section.trainers {
 }
 .trainers .container .layout .col {
       width: calc(25% - 15px);
-      background-color: red;
       border-radius: 15px;
       overflow: hidden;
       box-shadow: 5px 4px 25px #00000025;
@@ -774,35 +692,6 @@ section#Gallery {
       max-width: 1350px;
       display: block;
 }
-#Gallery .container .heading {
-      display: block;
-      text-transform: uppercase;
-      font-family: 'Sora';
-}
-#Gallery .container .heading h5 {
-      color: var(--red-blue);
-      font-size: 18px;
-      margin-bottom: 10px;
-}
-#Gallery .container .heading h3 {
-      position: relative;
-      font-size: 55px;
-      margin-bottom: 5px;
-}
-#Gallery .container .heading h3::after {
-      content: "";
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 110px;
-      height: 5px;
-      background-color: var(--red-blue);
-      border-radius: 10px;
-      animation: h3-before 2s linear 0s infinite alternate forwards;
-}
-#Gallery .container .heading h3 span {
-      color: var(--red-blue);
-}
 #Gallery .container p.title {
       margin-block: 30px;
       font-family: 'Roboto', sans-serif;
@@ -1000,35 +889,6 @@ section.contact {
       width: 85%;
       max-width: 1350px;
       display: block;
-}
-.contact .container .heading {
-      display: block;
-      text-transform: uppercase;
-      font-family: 'Sora';
-}
-.contact .container .heading h5 {
-      color: var(--red-blue);
-      font-size: 18px;
-      margin-bottom: 10px;
-}
-.contact .container .heading h3 {
-      position: relative;
-      font-size: 55px;
-      margin-bottom: 5px;
-}
-.contact .container .heading h3::after {
-      content: "";
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 110px;
-      height: 5px;
-      background-color: var(--red-blue);
-      border-radius: 10px;
-      animation: h3-before 2s linear 0s infinite alternate forwards;
-}
-.contact .container .heading h3 span {
-      color: var(--red-blue);
 }
 .contact .container p.title {
       margin-block: 30px;

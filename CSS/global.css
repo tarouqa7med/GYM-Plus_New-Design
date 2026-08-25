@@ -23,38 +23,43 @@ html {
       background-size: 90%;
       background-attachment: fixed;
 }
-.container {
-      width: 80%;
-      display: block;
+section > .container {
+      max-width: 1400px;
       margin: auto;
 }
-.left {
-      float: left;
+
+section .container .heading {
+      display: block;
+      text-transform: uppercase;
+      font-family: 'Sora';
 }
-.right {
-      float: right;
+section .container .heading h5 {
+      color: var(--red-blue);
+      font-size: 18px;
+      margin-bottom: 10px;
 }
-.clearfix {
-      clear: both;
+section .container .heading h3 {
+      position: relative;
+      font-size: 55px;
+      margin-bottom: 5px;
 }
+section .container .heading h3::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 110px;
+      height: 5px;
+      background-color: var(--red-blue);
+      border-radius: 10px;
+      animation: h3-before 2s linear 0s infinite alternate forwards;
+}
+section .container .heading h3 span {
+      color: var(--red-blue);
+}
+
 ul {
       display: flex;
       list-style: none;
       gap: 20px;
-}
-.container .spans {
-      height: 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 5px;
-}
-.container .spans span:nth-child(odd) {
-      border-bottom: 0.5px solid var(--main-text);
-      width: 85px;
-}
-.container .spans span:nth-child(even) {
-      border-bottom: 0.5px solid var(--main-text);
-      width: 200px;
 }
